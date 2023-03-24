@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>IntraDesign</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/IntraDesign.png')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<script type=text/javascript>
+		function show() {
+			var image = document.getElementById('loading');
+			image.src = "{{url_for('static',filename='images/loading.gif')}}"
+			image.style.visibility = "visible";
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<center>
+		<div class="neon-border">
+			<img src="{{url_for('static',filename='images/IntraDesign.png')}}" alt="IntraDesign Logo" width="120" style="padding: 50px;">
+		</div>
+	</center>
+
+	<center><h1>IntraDesign</h1></center>
+
+	<div class="card">
+		<center><h2>Manifest Your Reality</h2></center>
+		<form method="post">
+			<label for="name">Room Type:</label>
+			<input type="text" id="name" name="name" required>
+		  
+			<label for="message">Description:</label>
+			<textarea id="message" name="message" required></textarea>
+		  
+			<input type="submit" value="Manifest" onclick="show();">
+		</form>	
+		<center><img style="visibility: hidden;" src="" alt="Loading" id="loading"><center>	  
+	</div>
+
+	<footer>
+		&#169; Copyrighted and Created by Shashank Kashyap Vijay Kumar Pandey
+	</footer>
+
+</body>
+</html>
